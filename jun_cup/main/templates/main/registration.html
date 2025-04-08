@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Регистрация | Система анализа рекламных вывесок</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-gray-900">
+
+  <div class="bg-indigo-50">
+    <header>
+      <nav class="bg-indigo-50 border-gray-200 px-4 lg:px-6 py-2.5">
+        <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
+          <a href="#" class="flex items-center">
+            <img src="{% static 'img/header_future-makers.svg' %}" alt="Logo" class="mr-3" width="40" height="40"/>
+            <span class="text-[#0087bf] self-center text-xl font-semibold whitespace-nowrap">Система анализа рекламных вывесок</span>
+          </a>
+          <div class="flex items-center lg:order-2">
+            <a href="#" class="text-gray-800 hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 py-2.5 mr-2">Войти</a>
+            <a href="#" class="text-white bg-[#0087bf] hover:bg-[#006a8d] font-medium rounded-lg text-sm px-4 py-2.5">Зарегистрироваться</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="flex items-center justify-center min-h-screen py-10 px-4">
+      <div class="w-full max-w-md bg-white rounded-2xl shadow-lg p-8">
+        <h2 class="text-2xl font-bold text-center text-gray-900 mb-6">Регистрация</h2>
+        <form action="#" method="POST" class="space-y-5">
+          <div>
+            <label for="username" class="block text-sm font-medium text-gray-700">Имя пользователя</label>
+            <input type="text" id="username" name="username" required class="mt-1 block w-full rounded-lg border border-gray-300 px-4 py-2 shadow-sm focus:border-[#0087bf] focus:ring-[#0087bf]">
+          </div>
+          <div>
+            <label for="email" class="block text-sm font-medium text-gray-700">Электронная почта</label>
+            <input type="email" id="email" name="email" required class="mt-1 block w-full rounded-lg border border-gray-300 px-4 py-2 shadow-sm focus:border-[#0087bf] focus:ring-[#0087bf]">
+          </div>
+          <div>
+            <label for="password" class="block text-sm font-medium text-gray-700">Пароль</label>
+            <input type="password" id="password" name="password" required class="mt-1 block w-full rounded-lg border border-gray-300 px-4 py-2 shadow-sm focus:border-[#0087bf] focus:ring-[#0087bf]">
+          </div>
+          <div>
+            <label for="confirm_password" class="block text-sm font-medium text-gray-700">Повторите пароль</label>
+            <input type="password" id="confirm_password" name="confirm_password" required class="mt-1 block w-full rounded-lg border border-gray-300 px-4 py-2 shadow-sm focus:border-[#0087bf] focus:ring-[#0087bf]">
+          </div>
+          <button type="submit" class="w-full bg-[#0087bf] text-white font-semibold py-2.5 rounded-lg hover:bg-[#006a8d] transition duration-200">Зарегистрироваться</button>
+        </form>
+        <p class="mt-6 text-center text-sm text-gray-600">
+          Уже есть аккаунт? <a href="#" class="text-[#0087bf] hover:underline">Войти</a>
+        </p>
+      </div>
+    </main>
+  </div>
+
+</body>
+</html>

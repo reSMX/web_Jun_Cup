@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Распознавание вывесок</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-gray-900">
+
+  <div class="bg-indigo-50 min-h-screen">
+    <header>
+      <nav class="bg-indigo-50 border-gray-200 px-4 lg:px-6 py-2.5">
+        <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
+          <a href="#" class="flex items-center">
+            <img src="{% static 'img/header_future-makers.svg' %}" alt="Logo" class="mr-3" width="40" height="40"/>
+            <span class="text-[#0087bf] self-center text-xl font-semibold whitespace-nowrap">Система анализа рекламных вывесок</span>
+          </a>
+          <div class="flex items-center lg:order-2">
+            <a href="#" class="text-gray-800 hover:bg-gray-50 font-medium rounded-lg text-sm px-4 py-2.5 mr-2">Выйти</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="flex flex-col items-center justify-start px-4 py-10">
+      <div class="w-full max-w-xl bg-white rounded-2xl shadow-lg p-6">
+        <h2 class="text-2xl font-bold text-center mb-4">Загрузите изображение вывески</h2>
+        <form action="#" method="POST" enctype="multipart/form-data" class="space-y-4">
+          <div>
+            <input type="file" name="sign_image" accept="image/*" required class="block w-full text-sm text-gray-700 bg-gray-50 border border-gray-300 rounded-lg cursor-pointer focus:outline-none focus:ring-[#0087bf] focus:border-[#0087bf]">
+          </div>
+          <button type="submit" class="w-full bg-[#0087bf] text-white font-semibold py-2.5 rounded-lg hover:bg-[#006a8d] transition duration-200">Распознать</button>
+        </form>
+      </div>
+      
+      <div class="w-full max-w-4xl mt-10 bg-white rounded-2xl shadow-lg p-6">
+        <h3 class="text-xl font-semibold text-gray-900 mb-4 text-center">Результаты распознавания</h3>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+          <div class="flex flex-col items-center">
+            <p class="mb-2 text-gray-700">Обработанное изображение:</p>
+            <img src="{% static 'img/sample_detected_output.png' %}" alt="Распознанная вывеска" class="rounded-lg shadow max-w-full h-auto border">
+          </div>
+
+          <div class="flex flex-col items-center">
+            <p class="mb-2 text-gray-700">Распознанный шрифт:</p>
+            <p class="text-lg font-semibold text-[#0087bf]">Montserrat Bold</p>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+</body>
+</html>
